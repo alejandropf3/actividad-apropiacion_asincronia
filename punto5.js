@@ -24,14 +24,3 @@ function mostrarDatos(nombre3, horas3,total2){ //Creo la funcion para mostrar lo
         console.log(`El salario total de ${nombre3}, por las ${horas3} horas trabajadas, es de $${total2}`); //Imprimo los datos
     },3000);
 }
-
-
-// Encadenamiento que genera el "Callback Hell"
-// El cuerpo de la primera callback es la segunda llamada, 
-// y el cuerpo de la segunda callback es la tercera llamada, etc.
-tomarDatos((nombre, horas, pago) =>{
-    procesarDatos(nombre, horas, pago, (nombre2, horas2, total) =>{
-        mostrarDatos(nombre2, horas2, total)
-    })
-});
-
